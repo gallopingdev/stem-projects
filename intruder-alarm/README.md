@@ -3,7 +3,6 @@
 ## Introduction
 ![alarm-final](https://github.com/user-attachments/assets/35b3d391-92e5-4655-bc25-d9003367e273)
 
-
 ## Parts
 - Arduino Nano
   - 1
@@ -20,92 +19,14 @@
 - Cables
   - various for connecting components
 
-## Software
+# Step-by-Step Instructions
 
-### Arduino-cli
-#### Mac
-- Install _arduino-cli_ locally
-```bash
-brew install arduino-cli
-```
-- Configure
-```bash
-arduino-cli config init
-arduino-cli update-index
-arduino-cli install arduino:avr
-```
-- Find your Arduino
-  - Plug your USB cable into your Arduino Nano
-  - Plug the USB cable into your laptop
-  - Run the command to list your boards
-```bash
-$ arduino-cli board list
-Port                            Protocol Type              Board Name FQBN Core
-/dev/cu.Bluetooth-Incoming-Port serial   Serial Port       Unknown
-/dev/cu.debug-console           serial   Serial Port       Unknown
-/dev/cu.usbserial-141440        serial   Serial Port (USB) Unknown
-/dev/cu.wlan-debug              serial   Serial Port       Unknown
-```
-    - In the listing above the arduino is `/dev/cu.usbserial-141440`, note this down for later
-- Test Hello World
-  - Create a folder _hello_world_
-  - Create file _hello_world.ino_
-  - Paste these contents into the file and save
-```c
-#define BUILT_IN_LED_PIN 13
-#define LED_BLINK_INTERVAL_MILLISECONDS 500
+## Step 1: Install the Arduino development environment 
+See the [README](https://github.com/gallopingdev/stem-projects/blob/main/README.md) in this repository for instructions on how to download the IDE or CLI to work with the Nano microcontroller.
 
-void configureBuiltInLedPinAsOutput() {
-    pinMode(BUILT_IN_LED_PIN, OUTPUT);
-}
+## Step 2: Install the Nano on your Breadboard
 
-void turnBuiltInLedOn() {
-    digitalWrite(BUILT_IN_LED_PIN, HIGH);
-}
-
-void turnBuiltInLedOff() {
-    digitalWrite(BUILT_IN_LED_PIN, LOW);
-}
-
-void waitForSpecifiedNumberOfMilliseconds(unsigned long milliseconds) {
-    delay(milliseconds);
-}
-
-void performBuiltInLedBlinkCycleIndefinitely() {
-    while (true) {
-        turnBuiltInLedOn();
-        waitForSpecifiedNumberOfMilliseconds(LED_BLINK_INTERVAL_MILLISECONDS);
-        turnBuiltInLedOff();
-        waitForSpecifiedNumberOfMilliseconds(LED_BLINK_INTERVAL_MILLISECONDS);
-    }
-}
-
-void startBuiltInLedHelloWorldProgram() {
-    configureBuiltInLedPinAsOutput();
-    performBuiltInLedBlinkCycleIndefinitely();
-}
-
-void setup() {
-    startBuiltInLedHelloWorldProgram();
-}
-
-void loop() {
-    // All logic handled in startBuiltInLedHelloWorldProgram
-}
-
-```
-  - From that directory compile the code 
-```bash
-arduino-cli compile --fqbn arduino:avr:nano .
-```
-
-  - Finally upload the code to the arduino, using the device you found earlier
-```bash
-arduino-cli upload -p /dev/cu.usbserial-141440 --fqbn arduino:avr:nano .
-```
-- Congratulations!  You programmed your Arduino.  The built in LED should be blinking now
-
-## Building the Circuit
+## Step 3: Construct the Circuit
 
 <img width="1160" height="887" alt="Screenshot 2025-10-20 at 5 51 58 PM" src="https://github.com/user-attachments/assets/540edc7f-ee1e-4e6d-aa30-0ef87674157c" />
 
