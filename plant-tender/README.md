@@ -30,6 +30,7 @@ Gather the following supplies from your kit:
 - Install the Nano on your Breadboard
 
 - Construct the Circuit
+
 The table below details how to assemble the circuit on the breadboard:
 
 | Component | Connect From | Connect To | Notes |
@@ -57,6 +58,7 @@ The table below details how to assemble the circuit on the breadboard:
 |  | Short end | - rail on breadboard |  |
 
 - Upload the Code to the Nano
+
 Copy and paste the code provided in the [plant-tender.ino](https://github.com/gallopingdev/stem-projects/blob/main/plant-tender/plant-tender.ino) file to the Arduino IDE. Click the ✔️ button to validate the code and the ➡️ button to upload the code to the Nano.
 
 **NOTE:** You may want to disconnect the power for the 5v pump until you have tested the rest of the circuit.
