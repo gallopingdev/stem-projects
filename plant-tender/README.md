@@ -27,9 +27,9 @@ Gather the following supplies from your kit:
 ### Step-by-Step Instructions
 - Install the Arduino development environment or command line tools (see the [README](https://github.com/gallopingdev/stem-projects/blob/main/README.md) in this repository)
 
-- Install the Nano on your Breadboard
+##### Install the Nano on your Breadboard
 
-- Construct the Circuit
+##### Construct the Circuit
 
 The table below details how to assemble the circuit on the breadboard:
 
@@ -57,7 +57,7 @@ The table below details how to assemble the circuit on the breadboard:
 | Blue LED | Long end should be placed in a row with a 150 ohm resistor | D2 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
 |  | Short end | - rail on breadboard |  |
 
-- Upload the Code to the Nano
+##### Upload the Code to the Nano
 
 Copy and paste the code provided in the [plant-tender.ino](https://github.com/gallopingdev/stem-projects/blob/main/plant-tender/plant-tender.ino) file to the Arduino IDE. Click the ✔️ button to validate the code and the ➡️ button to upload the code to the Nano.
 
