@@ -24,87 +24,79 @@ Gather the following supplies from your kit:
 - 1 x small container with water
 - 1x small container with dry soil
 
+### Step-by-Step Instructions
+- Install the Arduino development environment or command line tools (see the [README](https://github.com/gallopingdev/stem-projects/blob/main/README.md) in this repository)
 
-Step-by-Step Instructions
-1. Software Setup
-Download and install the Arduino IDE (Integrated Development Environment) from the official Arduino website.
-Connect your Arduino board to your computer using the USB cable.
-Launch the Arduino IDE.
-Verify the correct board is selected under Tools > Board > Arduino AVR Boards > Arduino Uno.
-Verify the correct port is selected under Tools > Port (it may be labeled with the board name).
-2. Circuit Construction
-This section details how to assemble the circuit on the breadboard.
+- Install the Nano on your Breadboard
 
-Component
-Connect From
-Connect To
-Notes
-220 Ohm Resistor
-Arduino Digital Pin 13
-Any hole in the breadboard (e.g., Row 10)
-The digital pin will provide the signal.
-LED (Long Leg - Anode)
-Same row as the resistor (e.g., Row 10)
-A separate hole in the breadboard (e.g., Row 12)
-The long leg is the positive (+) terminal.
-LED (Short Leg - Cathode)
-Same separate hole as the LED short leg (e.g., Row 12)
-Arduino GND (Ground) Pin
-The short leg is the negative (-) terminal.
-Jumper Wire 1
-Resistor end (Row 10)
-Digital Pin 13 on Arduino
+- Construct the Circuit
+The table below details how to assemble the circuit on the breadboard:
 
+| Component | Connect From | Connect To | Notes |
+| :------- | :-------------- | :--------- | :---------- |
+| Nano |  5v pin of Nano | + rail of breadboard |  |
+|  | GND pin of Nano | - rail of breadboard |  |
+| Soil Probe | Probe | Sensor | Use a jumper cable with two female ends to connect the soil probe and the soil sensor |
+| Soil Sensor | VCC sensor pin | D5 pin of Nano | From left to right, the soil sensor pins are VCC, GND, DO, and AO |
+|  | GND sensor pin | - rail of breadboard |  |
+|  | AO sensor pin | A6 pin of Nano |  |
+| LCD Screen | VCC pin on screen | + rail of breadboard |  |
+|  | GND pin on screen | - rail breadboard |  |
+|  | SDA pin on screen | A4 pin on Nano |  |
+|  | SCL pin on screen | A5 pin on Nano |  |
+| MOSFET | S pin on MOSFET | D6 pin on Nano | From left to right, the MOSFET pins are S (Signal), D (Drain), G (Ground) |
+|  | D pin on MOSFET | 5v pump connection | With the flat side of the pump laying on the table and the silicon tubing facing down, attach to the right connector on the bottom of the pump. |
+|  | G pin on MOSFET | - rail on breadboard |
+| 9v Battery Holder | 9v battery holder red wire | Left connector on pump | Be sure both pump connections are touching the metal |
+|   | 9v battery holder black wire | - rail on breadboard | Even though we are using an external power source for the pump, the pump and the rest of the circuit must share a common ground |
+| Blue LED | Long end should be placed in a row with a 150 ohm resistor | D4 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
+|  | Short end | - rail on breadboard |  |
+| Green LED | Long end should be placed in a row with a 150 ohm resistor | D3 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
+|  | Short end | - rail on breadboard |  |
+| Blue LED | Long end should be placed in a row with a 150 ohm resistor | D2 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
+|  | Short end | - rail on breadboard |  |
 
-Jumper Wire 2
-LED Short Leg (Row 12)
-GND Pin on Arduino
+- Upload the Code to the Nano
+Copy and paste the code provided in the [plant-tender.ino](https://github.com/gallopingdev/stem-projects/blob/main/plant-tender/plant-tender.ino) file to the Arduino IDE. Click the ✔️ button to validate the code and the ➡️ button to upload the code to the Nano.
 
+**NOTE:** You may want to disconnect the power for the 5v pump until you have tested the rest of the circuit.
 
+### Testing 
 
-3. Programming the Arduino
-We will use the standard "Blink" sketch, which is the "Hello World" of Arduino.
+#### Testing the Moisture Sensor
 
-Open a new sketch in the Arduino IDE by clicking File > New.
-Copy and paste the following code into the sketch window:
+1. As the Plant Tender starts up, the LCD screen should display "Plant Tender Initializing ..."
+2. Use the wires to gently hold the soil probe in the air. Be sure the probe is not touching your body or any other conductive surface.
+3. The LCD should update to show a moisture reading of approximately 1020 (this may vary slightly from sensor to sensor)
+4. The Orange LED should be lit to indicate water is needed.
+5. Next, place the probe in a small cup of dry soil.
+6. The LCD should update to show a moisture reading of approximately 700 - 800.
+7. The Orange LED should continue to be lit.
+8. Finally, place the probe in the small cup of water .
+9. The LCD should now ready approximately 150.
+10. The Blue LED should be lit to indicate too much water.
 
-// Project: Simple LED Flasher
+#### Testing the Pump
 
-void setup() {
+1. Reconnect the power for the pump but don't place the tubes in the water yet.
+2. Use the wires to gently hold the soil probe in the air. The pump should turn on.
+3. Use the wires to gently dip the soil probe in the small cup of water. The pump should turn off.
 
-  // initialize digital pin 13 as an output.
+#### Putting it all together
 
-  pinMode(13, OUTPUT);
+1. Place the right tube from the pump into the small cup of water.
+2. Place the left tube in the small cup of dry soil.
+3. Place the soil probe in the small cup of dry soil (be sure to completely cover the probe sensors).
+4. The pump should pulse on and off for a few seconds to provide water to the soil.
+5. When the reaches a moisture between 300 - 600, the pump should turn off and the Green LED should be lit.
 
-}
+**Note:** To avoid corrosion of the sensor, we only send power to the sensor when we want to take a reading. This means the sensor readings are only updated every 6 seconds. You can extend this time to take less frequent readings.
 
-// the loop function runs over and over again forever
+### Extending this Project
 
-void loop() {
+1. Can you change the code to allow for more or less moisture to trigger the pump to run?
+2. Can you extend the time between moisture readings to optimize battery life?
 
-  digitalWrite(13, HIGH);   // turn the LED on (HIGH is the voltage level)
+### Share your modifications with the community
 
-  delay(1000);              // wait for a second (1000 milliseconds)
-
-  digitalWrite(13, LOW);    // turn the LED off by making the voltage LOW
-
-  delay(1000);              // wait for a second
-
-}
-
-Save the sketch by clicking File > Save. You can name it LEDFlasher.
-Click the Verify button (check mark icon) to check the code for errors.
-Click the Upload button (right arrow icon) to send the code to the Arduino board.
-Conclusion and Next Steps
-The LED connected to pin 13 should now be flashing on and off, staying on for one second and off for one second.
-Troubleshooting
-If your LED is not flashing, check the following:
-
-Circuit: Is the long leg (anode) of the LED connected toward Pin 13 and the short leg (cathode) connected to the GND pin?
-Resistor: Is the 220 Ohm resistor correctly placed in series to limit the current?
-Connections: Are all jumper wires firmly placed in the breadboard and Arduino pins?
-Extensions
-Try modifying the delay() values in the loop() function to change the flashing speed. For instance, changing delay(1000) to delay(200) will make the LED flash five times faster.
-
-For more information, refer to the project documentation at File.
-
+Do you have a suggestion for improving these instructions or extending the functionality of the Plant Tender? If so, please create an issue in this repository or, better yet, create a pull request to add your code files. We'd love to hear about your experience with this project!
