@@ -1,6 +1,10 @@
 # Community Stem Projects
 
-Welcome to our collection of STEM projects. Many of these projects use Arduino. You have two options for working with the IDE. You can install the Arduino IDE or you can use the Arduino CLI:
+Welcome to our collection of STEM projects. 
+
+
+## Getting Started with the Arduino
+The projects in this repository use the small, inexpensive Arduino Nano to add fun features and capabilities. You'll need to connect the Nano to your computer/laptop in order to load programs you write. You have two options for loading software on your Arduino, you can install the Arduino IDE or you can use the Arduino CLI:
 
 ### IDE Setup
 1. Download and install the Arduino development environment from [the official Arduino website](https://www.arduino.cc/en/software/).
