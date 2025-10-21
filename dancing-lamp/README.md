@@ -22,7 +22,12 @@ See the [README](https://github.com/gallopingdev/stem-projects/blob/main/README.
 
 ##### Step 2: Install the Nano on your Breadboard
 
-##### Step 3: Construct the Circuit
+##### Step 3: Customize your desklamp base
+Your desklamp is an opportunity to express your creativity. You'll use a 4" x 12" shipping tube as the base of our lamp. 
+- Paint or decorate the shipping tube
+- Attach the LED strip to the shipping tube in the desired pattern (be sure the strip connectors are near the bottom of the lamp)
+
+##### Step 4: Construct the Circuit
 
 The table below details how to assemble the circuit on the breadboard:
 
@@ -37,7 +42,7 @@ The table below details how to assemble the circuit on the breadboard:
 | 9v Battery Holder | 9v battery holder red wire | Left connector on pump | Be sure both pump connections are touching the metal |
 |   | 9v battery holder black wire | - rail on breadboard | Even though we are using an external power source for the pump, the pump and the rest of the circuit must share a common ground |
 
-##### Step 4: Upload the Code to the Nano
+##### Step 5: Upload the Code to the Nano
 
 Copy and paste the code provided in the [dancing-lamp.ino](https://github.com/gallopingdev/stem-projects/blob/main/dancing-lamp/dancing-lamp.ino) file to the Arduino IDE. Click the ✔️ button to validate the code and the ➡️ button to upload the code to the Nano.
 
