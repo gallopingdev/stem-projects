@@ -1,0 +1,1 @@
+Instructions for dancing lamp.
