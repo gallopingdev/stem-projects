@@ -13,6 +13,7 @@ Gather the following supplies from your kit:
 - 1 × Breadboard
 - 4 x Breadboard jumper wires
 - 1 × USB cable for Arduino
+- (optional) 1 x Sound Sensor module
 
 ### Step-by-Step Instructions
 
