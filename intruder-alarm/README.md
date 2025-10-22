@@ -109,10 +109,10 @@ My sensor has these pins unlabeled. Typically the left pin will be _VCC_/_5V_, t
 
 ![sensor-back](https://github.com/user-attachments/assets/103be6c8-c3c0-4b9f-ae70-bc15743e3281)
 
-If you are unsure and don't want to guess, one way to fine the propper _5_ pin is to inspect the back of the sensor and look for the small IC. 
-This should be a power regulation chip and will be closest to the _5_ pin.
+If you are unsure and don't want to guess, one way to fine the propper _5v_ pin is to inspect the back of the sensor and look for the small IC. 
+This should be a power regulation chip and will be closest to the _5v_ pin.
 
-Connect the Voltage pin (leftmost pin or the one you identified earlier) to the _5_ rail.
+Connect the Voltage pin (leftmost pin or the one you identified earlier) to the _5v_ rail.
 
 Connect the middle pin to Arduino pin _D2_
 
