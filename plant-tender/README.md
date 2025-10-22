@@ -10,8 +10,7 @@ Gather the following supplies from your kit:
 - 1 × Soil moisture probe with control board
 - 1 × LCD 16×2 display (with I2C backpack)
 - 1 × Mini 5v peristaltic pump
-- 1 × Light sensor (photoresistor + 10kΩ resistor)
-- 1 × NPN transistor (e.g., 2N2222 or S8050)
+- 1 × Light sensor
 - 3 × LEDs (blue, green, orange)
 - 3 × 150Ω resistors (for LEDs)
 - 1 x MOSFET
