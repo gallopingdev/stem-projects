@@ -84,6 +84,10 @@ Your transistor should look like a cylinder cut in half lengthwise. It will have
 Transistors have 3 legs, called Emitter, Base, and Collector.
 With your transistors flat side facing you, the Emitter is the left pin, the Base is the center pin, and the Collector is the rightmost pin.
 
+>[!note]
+>Transistors, even with the same unit number but from different manufacturers can have different pin configurations
+>If the speaker doesn't work, first ensure all connections are seated and then look for the transistor specification sheet and ensure which pins are the Emitter, Base, and Collector
+
 Seat your transistor in 3 adjacent columns.  
 
 Connect your Transistor Emitter (left leg) to the _gnd_ rail
