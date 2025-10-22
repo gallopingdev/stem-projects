@@ -132,7 +132,7 @@ E.G. Create a folder named _alarm_ and save the program in that folder as _alarm
 
 >[!note]
 >As you read through the code below, you will notice a 60s delay.  This is to give the Motion Sensor time to initialize.
->Feel free to play with this value after you have your circuit working, but note that it will take 60s for the curcuit to be able to detect motion after you plug it inx
+>Feel free to play with this value after you have your circuit working, but note that it will take 60s for the curcuit to be able to detect motion after you plug it in as written
 
 ```c
 // PIR + Speaker Motion Alert (with built-in LED)
