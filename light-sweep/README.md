@@ -1,7 +1,8 @@
 # Light Frequency Sweeper
 
 ## Introduction
-![final-lit](https://github.com/user-attachments/assets/7fef4c96-b980-4e92-af13-396cb238989a)
+
+![final-lit](https://github.com/user-attachments/assets/4dd995e4-7fc5-4e9f-92ae-6ed2b5e8b912)
 
 ## Parts
 - Arduino Nano
@@ -114,7 +115,9 @@ arduino-cli upload -p /dev/cu.usbserial-141440 --fqbn arduino:avr:nano .
 - Congratulations!  You programmed your Arduino.  The built in Led should be blinking now
 
 ## Building the Circuit
-<img width="1178" height="897" alt="circuit-diagram" src="https://github.com/user-attachments/assets/f7c28d56-5dcc-472b-8c2a-4ecf92db9e2b" />
+
+<img width="1178" height="897" alt="circuit-diagram" src="https://github.com/user-attachments/assets/c7b4e3f7-a173-4441-badb-25b4ea37b3e6" />
+
 
 ### How breadboards work
 The breadboard is broken in to two mirrored halves, along the center depression.
@@ -137,7 +140,8 @@ Firmly seat the Arduino into the breadboard with the USB port on one end of the 
 Ensure you seat the Arduino across the central depression, with one set of pins on either side. This depression prevents connections between either side, so we ensure we are not bridging any pins on the Arduino.
 
 #### Wire the Arduino
-![arduino](https://github.com/user-attachments/assets/285b7bd1-ac08-410e-beab-d4a4ae43ff1d)
+
+![arduino](https://github.com/user-attachments/assets/84a35ea3-7e28-494c-bbcf-2b384714c838)
 
 Look closely at the labels on the pins of your arduino.  You are looking for 2 _gnd_ pins on either side and one _5v_ on one side.
 Now look closely at the top and bottom of your breadboard.  There are two channels on either side labeled _+_ and _-_ respectively.
@@ -151,12 +155,15 @@ Wire the _gnd_ pins anywhere in the _-_  rail for both pins.
 Next wire the _5v_ pin to the _+_ rail(s)
 
 ### Install the LCD screen
-![lcd-wired](https://github.com/user-attachments/assets/49ad8003-2955-4194-b65b-b55cd93c8d7a)
+
+![lcd-wired](https://github.com/user-attachments/assets/2cda67c8-a060-4eab-83de-7db4dda6be49)
+
 
 Take out your LCD screen and flip it over to see the back.
 There is a small board soldered to the underside of your LCD with 4 pins.
 
-![lcd-back](https://github.com/user-attachments/assets/3001a0eb-3258-4348-9475-e9bd6787f654)
+![lcd-back](https://github.com/user-attachments/assets/cb16b21d-a763-4d24-9df0-95202cf16cd8)
+
 
 This is an I2C module.  This is a specification that allows easy communication with peripherals with just 2 pins, and saves us having to wire the entire thing.
 Take some of the cables with the square female attachment and wire the _gnd_ pin on the LCD I2C module and wire that to the _gnd_ rail of your choice
@@ -166,7 +173,8 @@ Next wire the _sda_ pin on the LCD I2C module to the arduino pin _A4_
 Finally wire the _scl_ pin on the LCD I2C module to the arduino pin _A5_
 
 ### Install the Led's
-![leds-lcd](https://github.com/user-attachments/assets/053008e4-1d8f-4844-ba8e-4b52254f3ec1)
+
+![leds-lcd](https://github.com/user-attachments/assets/61803694-c00b-44e1-b606-240d8900b064)
 
 LED stands for _Light Emitting Diode_. This is important for our purposes because diodes are electrical components that conduct current in a single direction.  This is different from all of our components so far.
 
@@ -180,7 +188,8 @@ Repeat the same steps for Green, wiring the resistor, and through the long leg o
 Finally repeat the steps for the Blue LED, wiring it to arduino pin _D11_
 
 ### Install the Potentiometers
-![final-unlit](https://github.com/user-attachments/assets/b48b9aee-1074-4796-919b-2ea45b46710b)
+
+![final-unlit](https://github.com/user-attachments/assets/d02573fa-04be-4be0-a7bd-6eab362e350f)
 
 #### Seat the Potentiometers
 Towards the bottom of your breadboard seat all three potentiometers.  Carefull the pins are delicate, you can bend them back in place if needed.
