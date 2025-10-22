@@ -6,13 +6,12 @@ In this project, you’ll use an addressable LED strip to build a programmable d
 
 Gather the following supplies from your kit:
 - 1 × Arduino Nano
-- 1 × LCD 16×2 display (with I2C backpack)
 - 1 × Strip of Addressable LEDs with connectors
 - 1 × 330Ω resistor
 - 1 x 9v Battery holder
 - 1 x 9v Battery
 - 1 × Breadboard
-- 18 x Breadboard jumper wires
+- 4 x Breadboard jumper wires
 - 1 × USB cable for Arduino
 
 ### Step-by-Step Instructions
@@ -35,12 +34,11 @@ The table below details how to assemble the circuit on the breadboard:
 | :------- | :-------------- | :--------- | :---------- |
 | Nano |  5v pin of Nano | + rail of breadboard |  |
 |  | GND pin of Nano | - rail of breadboard |  |
-| LCD Screen | VCC pin on screen | + rail of breadboard |  |
-|  | GND pin on screen | - rail breadboard |  |
-|  | SDA pin on screen | A4 pin on Nano |  |
-|  | SCL pin on screen | A5 pin on Nano |  |
-| 9v Battery Holder | 9v battery holder red wire | Left connector on pump | Be sure both pump connections are touching the metal |
-|   | 9v battery holder black wire | - rail on breadboard | Even though we are using an external power source for the pump, the pump and the rest of the circuit must share a common ground |
+| LED Strip | 5V wire on LEDs | + rail of breadboard |  |
+|  | GND wire on LEDs | - rail of breadboard |  |
+|  | DO wire on LEDs | D3 pin on Nano | Use a jumper wire to connect the D3 pin to any open row on the breadboard. Place the 330Ω resistor in the same row and then insert the LED pin into same row. |
+
+**NOTE:** Since the LEDs use a thinner wire, you may find it easier to wrap the LED wire around the end of a breadboard jumper cable and then insert the other end of the jumper cable into the appropriate breadboard location.
 
 ##### Step 5: Upload the Code to the Nano
 
@@ -48,10 +46,11 @@ Copy and paste the code provided in the [dancing-lamp.ino](https://github.com/ga
 
 ### Extending this Project
 
-1. What interesting light shows can you create?
-2. Can you make the lights flash on and off in a pattern?
+1. Explore the [examples folder](https://github.com/FastLED/FastLED/tree/master/examples) in the FastLED library and add new effects to your LEDs.
+2. What other interesting patterns can you create? Can you make the lights flash on and off in a pattern?
+3. Using the sound sensor included in your kit and the FastLED library, can you make your LED strip react to music?
 
 ### Share your modifications with the community
 
-Do you have a suggestion for improving these instructions or extending the functionality of the Plant Tender? If so, please create an issue in this repository or, better yet, create a pull request to add your code files. We'd love to hear about your experience with this project!
+Do you have a suggestion for improving these instructions or extending the functionality of the Dancing Lamp? If so, please create an issue in this repository or, better yet, create a pull request to add your code files. We'd love to hear about your experience with this project!
 
