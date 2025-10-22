@@ -1,7 +1,8 @@
 # Intruder Alarm
 
 ## Introduction
-![alarm-final](https://github.com/user-attachments/assets/35b3d391-92e5-4655-bc25-d9003367e273)
+
+![alarm-final](https://github.com/user-attachments/assets/e6711ee8-5727-40c6-a393-89b74100d933)
 
 ## Parts
 - Arduino Nano
@@ -22,14 +23,14 @@
 # Step-by-Step Instructions
 
 ## Step 1: Install the Arduino development environment 
+
 See the [README](https://github.com/gallopingdev/stem-projects/blob/main/README.md) in this repository for instructions on how to download the IDE or CLI to work with the Nano microcontroller.
 
 ## Step 2: Install the Nano on your Breadboard
 
 ## Step 3: Construct the Circuit
 
-<img width="1160" height="887" alt="Screenshot 2025-10-20 at 5 51 58 PM" src="https://github.com/user-attachments/assets/540edc7f-ee1e-4e6d-aa30-0ef87674157c" />
-
+<img width="1160" height="887" alt="circuit-diagram" src="https://github.com/user-attachments/assets/fcc57953-09f4-486a-a399-bea09c533d5d" />
 
 ### How breadboards work
 The breadboard is broken in to two mirrored halves, along the center depression.
@@ -52,7 +53,8 @@ Firmly seat the Arduino into the breadboard with the USB port on one end of the 
 Ensure you seat the Arduino across the central depression, with one set of pins on either side. This depression prevents connections between either side, so we ensure we are not bridging any pins on the Arduino.
 
 #### Wire the Arduino
-![arduino](https://github.com/user-attachments/assets/285b7bd1-ac08-410e-beab-d4a4ae43ff1d)
+
+![arduino](https://github.com/user-attachments/assets/5ecc7fa8-f475-4afb-8506-955005716fc0)
 
 Look closely at the labels on the pins of your arduino.  You are looking for 2 _gnd_ pins on either side and one _5v_ on one side.
 Now look closely at the top and bottom of your breadboard.  There are two channels on either side labeled _+_ and _-_ respectively.
@@ -66,7 +68,8 @@ Wire the _gnd_ pins anywhere in the _-_  rail for both pins.
 Next wire the _5v_ pin to the _+_ rail(s)
 
 ### Installing the Speaker
-![speaker](https://github.com/user-attachments/assets/7b229fc5-c208-4e6e-b484-14f1d02db614)
+
+![speaker](https://github.com/user-attachments/assets/b71fd26f-0b16-4bc9-949e-71c6a27314bc)
 
 To install the speaker you will need:
 - Speaker
@@ -98,12 +101,13 @@ Finally connect the Transistor Collector (right leg) to the black wire on your s
 Connect the red wire to the _5v_ rail on the breadboard.
 
 ### Installing the Motion Sensor
-![sensor-wired](https://github.com/user-attachments/assets/6c58b05c-382c-4518-ac37-2a97472977e9)
+
+![sensor-wired](https://github.com/user-attachments/assets/7d8241e9-9b2b-40ee-aff9-c2c469d6ca55)
 
 Turn your motion sensor upside down and orient it with the 3 pins towards the bottom.
 My sensor has these pins unlabeled. Typically the left pin will be _VCC_/_5V_, the middle pin will go to the Arduino, and the right pin will go to _gnd_
 
-![sensor-back](https://github.com/user-attachments/assets/f192278b-245c-41a5-9da4-249a2911ef42)
+![sensor-back](https://github.com/user-attachments/assets/103be6c8-c3c0-4b9f-ae70-bc15743e3281)
 
 If you are unsure and don't want to guess, one way to fine the propper _5_ pin is to inspect the back of the sensor and look for the small IC. 
 This should be a power regulation chip and will be closest to the _5_ pin.
@@ -122,7 +126,7 @@ Make sure the name of the folder and the name of the file, excluding the extensi
 
 E.G. Create a folder named _alarm_ and save the program in that folder as _alarm.ino_
 
->![note]
+>[!note]
 >As you read through the code below, you will notice a 60s delay.  This is to give the Motion Sensor time to initialize.
 >Feel free to play with this value after you have your circuit working, but note that it will take 60s for the curcuit to be able to detect motion after you plug it inx
 
