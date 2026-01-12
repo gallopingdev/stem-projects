@@ -55,7 +55,7 @@ The table below details how to assemble the circuit on the breadboard:
 |  | Short end | - rail on breadboard |  |
 | Green LED | Long end should be placed in a row with a 150 ohm resistor | D3 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
 |  | Short end | - rail on breadboard |  |
-| Blue LED | Long end should be placed in a row with a 150 ohm resistor | D2 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
+| Orange LED | Long end should be placed in a row with a 150 ohm resistor | D2 pin on Nano | The long and short end of the LED should be in separate rows of the breadboard. |
 |  | Short end | - rail on breadboard |  |
 
 ##### Step 4: Upload the Code to the Nano
