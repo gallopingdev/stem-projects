@@ -46,7 +46,7 @@ The table below details how to assemble the circuit on the breadboard:
 |  | GND pin on screen | - rail breadboard |  |
 |  | SDA pin on screen | A4 pin on Nano |  |
 |  | SCL pin on screen | A5 pin on Nano |  |
-| MOSFET | S pin on MOSFET | D6 pin on Nano | From left to right, the MOSFET pins are S (Signal), D (Drain), G (Ground) |
+| MOSFET | S pin on MOSFET | D6 pin on Nano | From left to right, the MOSFET pins are S (Source), D (Drain), G (Gate) |
 |  | D pin on MOSFET | 5v pump connection | With the flat side of the pump laying on the table and the silicon tubing facing down, attach to the right connector on the bottom of the pump. |
 |  | G pin on MOSFET | - rail on breadboard |
 | 9v Battery Holder | 9v battery holder red wire | Left connector on pump | Be sure both pump connections are touching the metal |
