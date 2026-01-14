@@ -46,7 +46,7 @@ The table below details how to assemble the circuit on the breadboard:
 |  | GND pin on screen | - rail breadboard |  |
 |  | SDA pin on screen | A4 pin on Nano |  |
 |  | SCL pin on screen | A5 pin on Nano |  |
-| MOSFET | S pin on MOSFET | D6 pin on Nano | From left to right, the MOSFET pins are S (Source), D (Drain), G (Gate) |
+| MOSFET | S pin on MOSFET | D6 pin on Nano | Hold the MOSFET with the three pins facing the down and the front toward you. From left to right, the MOSFET pins are S (Source), D (Drain), G (Gate) |
 |  | D pin on MOSFET | 5v pump connection | With the flat side of the pump laying on the table and the silicon tubing facing down, attach to the right connector on the bottom of the pump. |
 |  | G pin on MOSFET | - rail on breadboard |
 | 9v Battery Holder | 9v battery holder red wire | Left connector on pump | Be sure both pump connections are touching the metal |
@@ -62,7 +62,7 @@ The table below details how to assemble the circuit on the breadboard:
 
 Copy and paste the code provided in the [plant-tender.ino](https://github.com/gallopingdev/stem-projects/blob/main/plant-tender/plant-tender.ino) file to the Arduino IDE. Click the ✔️ button to validate the code and the ➡️ button to upload the code to the Nano.
 
-**NOTE:** You may want to disconnect the power for the 5v pump until you have tested the rest of the circuit.
+**NOTE:** You may want to disconnect the connection leading from the MOSFET to the 5v pump until you have tested the rest of the circuit.
 
 ### Testing 
 
